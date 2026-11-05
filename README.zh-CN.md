@@ -38,7 +38,7 @@ AutoTavern 将酒馆战棋中的决策放入可复现的研究环境：模拟完
 
 本仓库是论文 [*Build, Don't Play: Self-Improving LLM Research Agents Develop a Hearthstone Battlegrounds AI That Rivals Top Players*](https://arxiv.org/abs/2610.33845v1) 的代码与数据发布，作者为南京大学、上海人工智能实验室的 Changlian Ma 与 Limin Wang。
 
-发布内容包括 TavernGym 和 TavernBench；**不包含训练后的 TavernAgent、模型权重、训练代码及评测任务生成器**。
+原始发布内容包括 TavernGym 和 TavernBench；**不包含训练后的 TavernAgent、模型权重、论文训练代码及评测任务生成器**。本仓库另提供一个可自行训练的 [PyTorch PPO 策略网络基线](docs/TRAINING.zh-CN.md)。
 
 TavernGym 已更新至 **37.0.2**，见[版本说明](docs/PATCH_37.0.2.md)。TavernBench 保留论文所用 **36.6.3** 的原始题目、标签、保存状态和评测结果。复现历史模拟器或工具调用实验请使用 `v1.0.0`；使用当前引擎执行工具调用时，采用的是 37.0.2 规则。
 
@@ -95,7 +95,7 @@ python -X utf8 -m tavernbench.report --set data/eval --runs results/eval \
 
 学习接口仍为 **245 个离散动作**，每个观察包含 **3,227 个数值特征**和 **124 个卡牌索引**。游戏规则与大厅设置可以显式配置，本次补丁不改变这些接口或观测维度。
 
-[环境指南](docs/TAVERNGYM.md) · [引擎架构](docs/ARCHITECTURE.md) · [卡牌实现覆盖](docs/CONTENT.md) · [时空酒馆规则](docs/TIMEWARP.md)
+[环境指南](docs/TAVERNGYM.md) · [策略网络训练](docs/TRAINING.zh-CN.md) · [引擎架构](docs/ARCHITECTURE.md) · [卡牌实现覆盖](docs/CONTENT.md) · [时空酒馆规则](docs/TIMEWARP.md)
 
 ## TavernBench
 

@@ -44,8 +44,9 @@ This is the code and data release for [*Build, Don't Play: Self-Improving LLM Re
 Develop a Hearthstone Battlegrounds AI That Rivals Top Players*](https://arxiv.org/abs/2610.33845v1),
 by Changlian Ma and Limin Wang, Nanjing University and Shanghai AI Laboratory.
 
-The release includes TavernGym and TavernBench. The trained TavernAgent, its weights and
-training code, and the benchmark item generators are not included.
+The original release includes TavernGym and TavernBench. The trained TavernAgent, its weights
+and paper training code, and the benchmark item generators are not included. This checkout also
+provides a trainable [PyTorch PPO policy baseline](docs/TRAINING.zh-CN.md) (Chinese guide).
 
 TavernGym now targets **37.0.2**; see the [patch notes](docs/PATCH_37.0.2.md).
 TavernBench keeps the paper's **36.6.3** tasks, labels, saved states and results unchanged.
@@ -110,7 +111,8 @@ It exposes the player-visible state, an exact legal action mask, and seeded save
 The learning interface provides 245 discrete actions, 3,227 numeric features and 124 card
 indices per observation. Rules and lobby settings can be configured explicitly.
 
-[Environment guide](docs/TAVERNGYM.md) · [Architecture](docs/ARCHITECTURE.md) ·
+[Environment guide](docs/TAVERNGYM.md) · [Policy training](docs/TRAINING.zh-CN.md) ·
+[Architecture](docs/ARCHITECTURE.md) ·
 [Implemented cards](docs/CONTENT.md) · [Timewarp rules](docs/TIMEWARP.md)
 
 ## TavernBench

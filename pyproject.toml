@@ -13,6 +13,7 @@ dependencies = ["numpy"]
 
 [project.optional-dependencies]
 test = ["pytest"]
+train = ["torch>=2.1"]
 # TavernBench model runners (scoring needs none of these)
 bench = ["openai>=1.0", "httpx", "requests"]
 
